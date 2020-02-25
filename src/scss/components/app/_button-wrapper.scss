@@ -1,0 +1,27 @@
+@import "../../abstract/variables";
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+
+  &__button {
+    font-size: 12px;
+    border: 1px solid $black;
+    background: #fff;
+    color: $black;
+    padding: 18px 30px;
+    border-radius: 0px;
+    letter-spacing: 3px;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+
+    @media #{$smallMobile} {
+      padding: 14px 30px;
+    }
+
+    &:hover {
+      background: $black;
+      color: #fff;
+    }
+  }
+}

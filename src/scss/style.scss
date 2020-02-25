@@ -1,0 +1,18 @@
+//base
+@import 'base/fonts';
+//abstract
+@import 'abstract/variables';
+@import 'abstract/app';
+
+//components
+@import "components/app/app";
+@import "components/app/header";
+@import "components/app/baner";
+@import "components/app/services";
+@import "components/app/icon-block";
+@import "components/app/button-wrapper";
+@import "components/app/text-section";
+@import "components/app/reviews";
+@import "components/app/contact-form";
+@import "components/app/input";
+@import "components/app/footer";

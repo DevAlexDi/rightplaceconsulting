@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap&subset=cyrillic');
+
+@font-face {
+    font-family: 'Tran';
+    src: url('../fonts/TrajanPro3-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/TrajanPro3-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/TrajanPro3-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/TrajanPro3-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/TrajanPro3-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/TrajanPro3-Regular.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }

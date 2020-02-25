@@ -1,0 +1,57 @@
+@import "../../abstract/variables";
+
+.text-section {
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.75em;
+    margin-bottom: 24px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__image{
+    @media #{$mobile} {
+      margin-bottom: 20px;
+    }
+    &--dif-width {
+      @media #{$mobile} {
+        max-width: 310px;
+      }
+    }
+  }
+
+  &__animated {
+    
+    opacity: 0;
+    transition: $visibilityTransition;
+  }
+
+  &__animated-block {
+    .text-section__animated-wrapper {
+      &:nth-child(1){
+        .text-section__animated{
+          transform: translateX(-30px);
+          transition-delay: .25s;
+        }
+      }
+      &:nth-child(2){
+        .text-section__animated{
+          transform: translateX(30px);
+          transition-delay: .35s;
+        }
+      }
+    }
+
+    &[data-anim=true]{
+      .text-section__animated{
+        transform: none!important;
+        opacity: 1;
+      }
+    }
+  }
+}

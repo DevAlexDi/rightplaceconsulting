@@ -1,0 +1,24 @@
+@import "../../abstract/variables";
+
+.input {
+  font-size: 14px;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  line-height: 17px;
+  letter-spacing: 3px;
+  padding: 10px 20px 10px 10px;
+  color: $black;
+  border-bottom: 1px solid #ebeced;
+  resize: none;
+  display: block;
+  width: 100%;
+
+  &:focus {
+    box-shadow: 0 5px 32px rgba(103,122,141,.17);
+  }
+
+  &--textarea {
+    min-height: 80px;
+  }
+}

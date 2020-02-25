@@ -1,0 +1,19 @@
+//font-family
+$mainFont: 'Open Sans', sans-serif;
+$secondFont: 'Tran', sans-serif;
+//font-weight
+$regular: 400;
+//colors
+$black:#212121;
+$gray: #999999;
+$lightGray: #e8e8e8;
+//transition
+$visibilityTransition: transform 0.45s cubic-bezier(0.39, 0.575, 0.565, 1),opacity 0.2s linear;
+//sizes
+$mobile-max-width: 767px;
+$small-mobile-max-width: 575px;
+$tablet-max-width: 991px;
+
+$tablet: "only screen and (max-width:#{$tablet-max-width})";
+$mobile: "only screen and (max-width:#{$mobile-max-width})";
+$smallMobile: "only screen and (max-width:#{$small-mobile-max-width})";
