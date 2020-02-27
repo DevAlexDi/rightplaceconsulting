@@ -52,15 +52,9 @@
   }
 }
 .icon-block{
-  border: 1px solid $lightGray;
-  padding: 0 10px 0 10px;
   height: 100%;
   display: flex;
   flex-direction: column;
-
-  @media #{$tablet} {
-    padding: 0 10px 20px 10px;
-  }
 
   &__content {
     position: relative;
@@ -90,6 +84,10 @@
     font-size: 19px;
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    &--white {
+      color: #fff;
+    }
   }
 
   &__description {
@@ -109,5 +107,56 @@
     @media #{$tablet} {
       transform: none;
     }
+  }
+
+  &__flip-card{
+    perspective: 1000px;
+    height: 100%;
+    &:hover {
+      .icon-block__flip-card-inner{
+        transform: rotateY(180deg);
+      }
+    }
+  }
+
+  &__flip-card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border: 1px solid $lightGray;
+    padding: 0 10px 20px 10px;
+    height: 100%;
+  }
+
+  &__front {
+    position: relative;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    background: #fff;
+    border: 1px solid $black;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding: 0 10px;
+  }
+  
+
+  &__list-item {
+    font-size: 14px;
+    color: $black;
   }
 }
