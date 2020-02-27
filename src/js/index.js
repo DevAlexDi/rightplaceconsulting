@@ -85,7 +85,7 @@ $(document).ready(function () {
     });
 
 
-    $('.close-over-slider').on('click', function () {
+    $('.close-over-slider, .over-slider__overlay').on('click', function () {
       $('.over-slider').removeClass('over-slider--opened');
       $('body').removeClass('over-slider-opened');
       $('.slider-main-menu-item').removeClass('nav-list__link--active');
