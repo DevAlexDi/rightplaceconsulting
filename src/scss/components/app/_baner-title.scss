@@ -1,0 +1,49 @@
+@import "../../abstract/variables";
+
+.baner-title{
+  color: #ffffff;
+  font-size: 80px;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  @media #{$tablet} {
+    font-size: 60px;
+  }
+ 
+  @media #{$mobile} {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  &__letter {
+    display: inline-block;
+  }
+  
+  &__text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  
+  }
+  
+  &__line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+
+    &--line_top {
+      top: 0;
+    }
+
+    &--line_bottom {
+      bottom: 0;
+    }
+  }
+}

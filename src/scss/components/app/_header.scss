@@ -1,12 +1,24 @@
 @import "../../abstract/variables";
 
+.header-wrapp {
+  position: relative;
+  z-index: 2;
+}
+
 .header{
-  position: fixed;
-  z-index: 50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  //z-index: 50;
   width: 100%;
-  background: #fff;
-  padding: 10px 0;
-  box-shadow: 0px 0px 10px 5px rgba(20,20,20,0.1);
+  
+  padding: 15px 0;
+  
+
+  @media #{$tablet} {
+    background: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(20,20,20,0.1);
+  }
 
   &__logo {
     width: 300px;
@@ -14,6 +26,26 @@
 
     @media #{$tablet} {
       width: 200px;
+    }
+  }
+
+  &__logo-link{
+    color: #fff;
+    font-family: $secondFont;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    @media #{$tablet} {
+      color: $black;
+    }
+
+    &:hover {
+      color: #fff;
+
+      @media #{$tablet} {
+        color: $black;
+      }
     }
   }
 
@@ -75,25 +107,53 @@
   }
 
   &__link {
-    color: $black;
+    color: #fff;
     font-size: 14px;
     line-height: 1.75;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media #{$tablet} {
+      color: $black;
+    }
     
     &:hover {
-      border-bottom: 1px solid $black;
+      border-bottom: 1px solid #fff;
+      color: #fff;
+
+      @media #{$tablet} {
+        color: $black;
+        border-color: $black;
+      }
+    }
+  }
+
+  &--black {
+    .nav-list__link {
+      color: $black;
+
+      &:hover {
+        border-bottom: 1px solid $black;
+        color: $black;
+      }
+
+      &--active {
+        border-bottom: 1px solid $black;
+      }
     }
   }
 }
 
 .sub-nav-list {
   margin: 0;
-  padding: 0;
+  padding: 5;
   list-style: none;
+  display: none;
   
   &__item {
-    padding: 5px 10px;
+    padding: 5px 15px;
+    opacity: 0;
+    
   }
 
   &__link {
@@ -109,4 +169,50 @@
       color: $gray;
     }
   }
+
+  &--show {
+    display: none;
+
+    @media #{$tablet} {
+      display: block;
+    }
+
+    .sub-nav-list__item {
+      transform: none;
+      animation: 0.4s ease-in forwards alternate subMenuAnim;
+
+      &:nth-child(1){
+        animation-delay: .05s;
+      }
+      &:nth-child(2){
+        animation-delay: .15s;
+      }
+      &:nth-child(3){
+        animation-delay: .20s;
+      }
+      &:nth-child(4){
+        animation-delay: .25s;
+      }
+      &:nth-child(5){
+        animation-delay: .30s;
+      }
+      &:nth-child(6){
+        animation-delay: .35s;
+      }
+      &:nth-child(7){
+        animation-delay: .40s;
+      }
+    }
+  }
+}
+
+@keyframes subMenuAnim { 
+  from { 
+    transform:translateX(-15px);
+    opacity: 0; 
+  } 
+  to {
+    transform:translateX(0);
+    opacity: 1;
+  }  
 }

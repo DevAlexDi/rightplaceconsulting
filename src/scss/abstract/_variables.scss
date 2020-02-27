@@ -10,10 +10,12 @@ $lightGray: #e8e8e8;
 //transition
 $visibilityTransition: transform 0.45s cubic-bezier(0.39, 0.575, 0.565, 1),opacity 0.2s linear;
 //sizes
+$hd-max-width: 1199px;
 $mobile-max-width: 767px;
 $small-mobile-max-width: 575px;
 $tablet-max-width: 991px;
 
+$hdScreen: "only screen and (max-width:#{$hd-max-width})";
 $tablet: "only screen and (max-width:#{$tablet-max-width})";
 $mobile: "only screen and (max-width:#{$mobile-max-width})";
 $smallMobile: "only screen and (max-width:#{$small-mobile-max-width})";

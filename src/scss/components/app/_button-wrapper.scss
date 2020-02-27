@@ -23,5 +23,16 @@
       background: $black;
       color: #fff;
     }
+
+    &--transparent {
+      color: #fff;
+      background: transparent;
+      border-color: #fff;
+
+      &:hover {
+        background: #fff;
+        color: $black;
+      }
+    }
   }
 }
